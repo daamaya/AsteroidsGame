@@ -1,4 +1,4 @@
-//your variable declarations here
+Spaceship Alpha;
 public void setup() 
 {
   //your code here
