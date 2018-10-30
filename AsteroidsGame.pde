@@ -6,6 +6,11 @@ public void setup()
 }
 public void draw() 
 {
-  //your code here
+	background(0);
+	Alpha.show();
+	Alpha.move();
 }
-
+public void keyPressed()
+{
+	if(key == 'w'){Alpha.accelerate(0.3);}
+}
