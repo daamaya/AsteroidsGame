@@ -13,4 +13,13 @@ public void draw()
 public void keyPressed()
 {
 	if(key == 'w'){Alpha.accelerate(0.3);}
+	if(key == 's'){Alpha.accelerate(-0.3);}
+	if(key == 'a'){Alpha.turn(-10);}
+	if(key == 'd'){Alpha.turn(10);}
+	if(key == 'r')
+	{
+		Alpha.setX((int)(Math.random()*width));
+		Alpha.setY((int)(Math.random()*width));
+		Alpha.setPointDirection((int)(Math.random()*360));
+	}
 }
