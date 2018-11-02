@@ -14,14 +14,18 @@ public void draw()
 	background(0);
 	Alpha.show();
 	Alpha.move();
+	if (!wPressed || !sPressed)
+	{
+		Alpha.setDirectionY(Alpha.getDirectionY()*.95);
+		Alpha.setDirectionX(Alpha.getDirectionX()*.95);
+	}
 	if(keyPressed)
 	{
-		if(wPressed == true){Alpha.accelerate(0.3);}
-		if(sPressed == true){Alpha.accelerate(-0.3);}
-		if(aPressed == true){Alpha.turn(-5);}
-		if(dPressed == true){Alpha.turn(5);}
+		if(wPressed){Alpha.accelerate(0.25);}
+		if(sPressed){Alpha.accelerate(-0.25);}
+		if(aPressed){Alpha.turn(-5);}
+		if(dPressed){Alpha.turn(5);}
 	}
-	keyReleased();
 }
 public void keyPressed()
 {
@@ -40,16 +44,8 @@ public void keyPressed()
 }
 public void keyReleased()
 {
-	if(key == 'w')
-	{
-		wPressed = false;
-		Alpha.setDirectionY(Alpha.getDirectionY()*.95);
-		Alpha.setDirectionX(Alpha.getDirectionX()*.95);
-	}
-	if(key == 's')
-	{
-		sPressed = false;
-		Alpha.setDirectionY(Alpha.getDirectionY()*.95);
-		Alpha.setDirectionX(Alpha.getDirectionX()*.95);
-	}
+	if(key == 'w'){wPressed = false;}
+	if(key == 's'){sPressed = false;}
+	if(key == 'a'){aPressed = false;}
+	if(key == 'd'){dPressed = false;}
 }
