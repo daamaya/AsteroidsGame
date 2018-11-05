@@ -1,9 +1,11 @@
 Spaceship Alpha;
+Star[] Platinum = new Star[500];
 private boolean wPressed, sPressed, aPressed, dPressed;
 public void setup() 
 {
 	size(800,800);
 	Alpha = new Spaceship();
+	for(int i = 0; Platinum.length; i++){Platinum[i] = new Star();}
 	wPressed = false;
 	sPressed = false;
 	aPressed = false;
@@ -12,17 +14,18 @@ public void setup()
 public void draw() 
 {
 	background(0);
+	for(int i = 0; Platinum.length; i++){Platinum[i].show();}
 	Alpha.show();
 	Alpha.move();
-	if (!wPressed || !sPressed)
+	if (!wPressed && !sPressed)
 	{
 		Alpha.setDirectionY(Alpha.getDirectionY()*.95);
 		Alpha.setDirectionX(Alpha.getDirectionX()*.95);
 	}
 	if(keyPressed)
 	{
-		if(wPressed){Alpha.accelerate(0.25);}
-		if(sPressed){Alpha.accelerate(-0.25);}
+		if(wPressed){Alpha.accelerate(0.2);}
+		if(sPressed){Alpha.accelerate(-0.2);}
 		if(aPressed){Alpha.turn(-5);}
 		if(dPressed){Alpha.turn(5);}
 	}
