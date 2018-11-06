@@ -5,16 +5,16 @@ public void setup()
 {
 	size(800,800);
 	Alpha = new Spaceship();
-	for(int i = 0; Platinum.length; i++){Platinum[i] = new Star();}
 	wPressed = false;
 	sPressed = false;
 	aPressed = false;
 	dPressed = false;
+	for(int i = 0; i < Platinum.length; i++){Platinum[i] = new Star();}
 }
 public void draw() 
 {
 	background(0);
-	for(int i = 0; Platinum.length; i++){Platinum[i].show();}
+	for(int i = 0; i < Platinum.length; i++){Platinum[i].show();}
 	Alpha.show();
 	Alpha.move();
 	if (!wPressed && !sPressed)
