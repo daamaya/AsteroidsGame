@@ -1,10 +1,10 @@
 class Star //note that this class does NOT extend Floater
 {
-	private int myX, myY;
+	private float myX, myY;
 	Star()
 	{
-		myX = (int)(Math.random()*width);
-		myY = (int)(Math.random()*height);
+		myX = (float)(Math.random()*width);
+		myY = (float)(Math.random()*height);
 	}
 	public void show()
 	{
