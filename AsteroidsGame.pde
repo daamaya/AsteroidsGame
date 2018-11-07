@@ -1,5 +1,6 @@
 Spaceship Alpha;
-Star[] Platinum = new Star[500];
+Star[] Platinum = new Star[500]; //is that a fukin jojo reference??!?!?!!?11!!1
+Asteroid[] Azeroth = new Asteroid[10];
 private boolean wPressed, sPressed, aPressed, dPressed;
 public void setup() 
 {
@@ -10,6 +11,7 @@ public void setup()
 	aPressed = false;
 	dPressed = false;
 	for(int i = 0; i < Platinum.length; i++){Platinum[i] = new Star();}
+	for(int j = 0; j < Azeroth.length; j++){Azeroth[j] = new Asteroid();}
 }
 public void draw() 
 {
@@ -29,6 +31,11 @@ public void draw()
 		if(aPressed){Alpha.turn(-5);}
 		if(dPressed){Alpha.turn(5);}
 	}
+	for(int j = 0; j < Azeroth.length; j++)
+	{
+		Azeroth[j].show();
+		Azeroth[j].move();
+	}
 }
 public void keyPressed()
 {
@@ -37,13 +44,13 @@ public void keyPressed()
 	if(key == 'a'){aPressed = true;}
 	if(key == 'd'){dPressed = true;}
 	if(key == 'r')
-		{
-			Alpha.setX((int)(Math.random()*width));
-			Alpha.setY((int)(Math.random()*width));
-			Alpha.setPointDirection((int)(Math.random()*360));
-			Alpha.setDirectionX(0);
-			Alpha.setDirectionY(0);
-		}
+	{
+		Alpha.setX((int)(Math.random()*width));
+		Alpha.setY((int)(Math.random()*width));
+		Alpha.setPointDirection((int)(Math.random()*360));
+		Alpha.setDirectionX(0);
+		Alpha.setDirectionY(0);
+	}
 }
 public void keyReleased()
 {

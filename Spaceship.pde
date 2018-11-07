@@ -1,5 +1,13 @@
 class Spaceship extends Floater  
 {   
+	/*public void accelerate (double dAmount)
+    {
+	    //convert the current direction the floater is pointing to radians
+	    double dRadians = myPointDirection*(Math.PI/180);
+	    //change coordinates of direction of travel
+	    if(myDirectionX < 5 && myDirectionX > -5){myDirectionX += ((dAmount) * Math.cos(dRadians));}
+	    if(myDirectionY < 5 && myDirectionY > -5){myDirectionY += ((dAmount) * Math.sin(dRadians));}
+    }*/
 	Spaceship()
 	{
 		myCenterX = myCenterY = 400;
