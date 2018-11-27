@@ -1,6 +1,6 @@
 Spaceship Alpha;
 Star[] Platinum = new Star[500]; //is that a fukin jojo reference??!?!?!!?11!!1
-Asteroid[] Azeroth = new Asteroid[10];
+ArrayList <Asteroid> Azeroth = new ArrayList <Asteroid>();
 private boolean wPressed, sPressed, aPressed, dPressed;
 public void setup() 
 {
@@ -11,7 +11,7 @@ public void setup()
 	aPressed = false;
 	dPressed = false;
 	for(int i = 0; i < Platinum.length; i++){Platinum[i] = new Star();}
-	for(int j = 0; j < Azeroth.length; j++){Azeroth[j] = new Asteroid();}
+	for(int j = 0; j < 10; j++){Azeroth.add(new Asteroid());}
 }
 public void draw() 
 {
@@ -24,17 +24,17 @@ public void draw()
 		Alpha.setDirectionY(Alpha.getDirectionY()*.95);
 		Alpha.setDirectionX(Alpha.getDirectionX()*.95);
 	}
-	if(keyPressed)
-	{
+	//if(keyPressed)
+	//{
 		if(wPressed){Alpha.accelerate(0.2);}
 		if(sPressed){Alpha.accelerate(-0.2);}
 		if(aPressed){Alpha.turn(-5);}
 		if(dPressed){Alpha.turn(5);}
-	}
-	for(int j = 0; j < Azeroth.length; j++)
+	//}
+	for(int j = 0; j < Azeroth.size(); j++)
 	{
-		Azeroth[j].show();
-		Azeroth[j].move();
+		Azeroth.get(j).show();
+		Azeroth.get(j).move();
 	}
 }
 public void keyPressed()

@@ -5,8 +5,8 @@ class Asteroid extends Floater
 	{
 		myCenterX = Math.random()*width;
 		myCenterY = Math.random()*height;
-		myDirectionX = Math.random()*3;
-		myDirectionY = Math.random()*3;
+		myDirectionX = Math.random()*5-2;
+		myDirectionY = Math.random()*5-2;
 		//myDirectionX = myDirectionY = 0; //test speed
 		myPointDirection = Math.random()*360;
 		myRotSpd = (int)(Math.random()*11) - 5;
