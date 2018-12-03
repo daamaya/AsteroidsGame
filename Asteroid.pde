@@ -12,8 +12,8 @@ class Asteroid extends Floater
 		myRotSpd = (int)(Math.random()*11) - 5;
 		//myRotSpd = 10; //test rotation speed
 		myColor = color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
-		mySize = (int)(Math.random()*10)+5;
-		//mySize = 15; //test size
+		mySize = (int)(Math.random()*11)+5;
+		//mySize = 10; //test size
 		corners = 5;
 		xCorners = new int[corners];
 		yCorners = new int[corners];
@@ -38,6 +38,7 @@ class Asteroid extends Floater
     public double getDirectionY(){return myDirectionY;}
     public void setPointDirection(int degrees){myPointDirection = degrees;}
     public double getPointDirection(){return myPointDirection;}
+    public int getMySize(){return mySize;}
     public void move()
     {
     	super.move();

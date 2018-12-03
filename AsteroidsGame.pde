@@ -35,6 +35,10 @@ public void draw()
 	{
 		Azeroth.get(j).show();
 		Azeroth.get(j).move();
+		if(dist(Azeroth.get(j).getX(), Azeroth.get(j).getY(), Alpha.getX(), Alpha.getY()) < 30 + 2 * Azeroth.get(j).getMySize())
+		{
+			Azeroth.remove(j);
+		}
 	}
 }
 public void keyPressed()
