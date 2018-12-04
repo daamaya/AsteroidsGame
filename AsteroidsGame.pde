@@ -26,8 +26,8 @@ public void draw()
 	}
 	//if(keyPressed)
 	//{
-		if(wPressed){Alpha.accelerate(0.2);}
-		if(sPressed){Alpha.accelerate(-0.2);}
+		if(wPressed){Alpha.accelerate(0.18);}
+		if(sPressed){Alpha.accelerate(-0.18);}
 		if(aPressed){Alpha.turn(-5);}
 		if(dPressed){Alpha.turn(5);}
 	//}
