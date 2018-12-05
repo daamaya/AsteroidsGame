@@ -1,6 +1,7 @@
 Spaceship Alpha;
 Star[] Platinum = new Star[500]; //is that a fukin jojo reference??!?!?!!?11!!1
 ArrayList <Asteroid> Azeroth = new ArrayList <Asteroid>();
+Bullet Beta = new Bullet();
 private boolean wPressed, sPressed, aPressed, dPressed;
 public void setup() 
 {
@@ -16,6 +17,7 @@ public void setup()
 public void draw() 
 {
 	background(0);
+	Beta.show();
 	for(int i = 0; i < Platinum.length; i++){Platinum[i].show();}
 	Alpha.show();
 	Alpha.move();
