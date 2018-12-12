@@ -19,10 +19,21 @@ class Bullet extends Floater
 	}
 	public void show()
 	{
-		stroke(0);
-		fill(255,0,0);
-		ellipse((float)myCenterX,(float)myCenterY,5,5);
-		//System.out.println("showing");
+		fill(255);   
+    	noStroke();    
+    
+    //translate the (x,y) center of the ship to the correct position
+    translate((float)myCenterX, (float)myCenterY);
+
+    //convert degrees to radians for rotate()     
+    float dRadians = (float)(myPointDirection*(Math.PI/180));
+    
+    //rotate so that the polygon will be drawn in the correct direction
+    rotate(dRadians);
+    
+    //"unrotate" and "untranslate" in reverse order
+    rotate(-1*dRadians);
+    translate(-1*(float)myCenterX, -1*(float)myCenterY);
 	}
 	public void setX(int x){myCenterX = x;}
     public int getX(){return (int)myCenterX;}
